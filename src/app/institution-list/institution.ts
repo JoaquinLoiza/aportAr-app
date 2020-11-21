@@ -1,6 +1,9 @@
-export interface institution {
+export interface Institution {
+    image: string;
     name: string;
-    category: string;
+    location: string;
+    presentation: string;
     collected: number;
-    img: string;
+    description: string;
+    links: Array<string>;
 }
