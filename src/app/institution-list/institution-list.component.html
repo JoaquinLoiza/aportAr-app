@@ -1,18 +1,30 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>example</th>
-            <th>example</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </tbody>
-</table>
+<div class="container-fluid" *ngFor='let institution of institutions'>
+    <div class="row border border-dark rounded mt-2 d-flex justify-content-between">
+        <!--Contenedorizquierda-->
+        <div class="col-9">
+            <div>
+                <img src="{{institution.image}}" alt="{{institution.name}}">
+            </div>
+            <div class="d-flex justify-content-between">
+                <h2>{{institution.name}}</h2>
+                <p>{{institution.location}}</p>
+            </div>
+            <div>
+                <p>{{institution.presentation}}</p>   
+            </div>
+            <div>
+                <p>{{institution.description}}</p>
+                <ul class="nav" >
+                    <li class="nav-item" *ngFor='let link of institution.links'>
+                        <a class="nav-link active" href="{{link}}">{{link}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Contenedor derecha-->
+        <div class="col-3">
+            <p>aca va otra cosa</p>
+            <p>Recolectado: {{institution.collected}}</p>
+        </div>
+    </div>
+</div>
