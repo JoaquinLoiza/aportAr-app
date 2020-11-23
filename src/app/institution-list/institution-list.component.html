@@ -7,7 +7,7 @@
             </div>
             <div class="d-flex justify-content-between">
                 <h2>{{institution.name}}</h2>
-                <p>{{institution.location}}</p>
+                <p>{{institution.location | uppercase}}</p>
             </div>
             <div>
                 <p>{{institution.presentation}}</p>   
@@ -24,7 +24,7 @@
         <!--Contenedor derecha-->
         <div class="col-3">
             <p>aca va otra cosa</p>
-            <p>Recolectado: {{institution.collected}}</p>
+            <p>Recolectado: {{institution.collected | currency}}</p>
         </div>
     </div>
 </div>
