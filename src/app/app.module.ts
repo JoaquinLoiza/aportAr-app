@@ -5,11 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InstitutionListComponent } from './institution-list/institution-list.component';
+import { AportarExploreComponent } from './aportar-explore/aportar-explore.component';
+import { AportarHomeComponent } from './aportar-home/aportar-home.component';
+import { AportarContactComponent } from './aportar-contact/aportar-contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InstitutionListComponent
+    InstitutionListComponent,
+    AportarExploreComponent,
+    AportarHomeComponent,
+    AportarContactComponent
   ],
   imports: [
     BrowserModule,
