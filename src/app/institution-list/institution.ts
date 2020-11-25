@@ -6,4 +6,5 @@ export interface Institution {
     collected: number;
     description: string;
     links: Array<string>;
+    quantity: number;
 }

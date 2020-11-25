@@ -1,6 +1,6 @@
 <div class="container-fluid" *ngFor='let institution of institutions'>
     <div class="row border border-dark rounded mt-2 d-flex justify-content-between">
-        <!--Contenedorizquierda-->
+        <!--CONTENEDOR IZQUIERDA-->
         <div class="col-9">
             <div>
                 <img src="{{institution.image}}" alt="{{institution.name}}">
@@ -21,10 +21,21 @@
                 </ul>
             </div>
         </div>
-        <!--Contenedor derecha-->
+        <!--CONTENEDOR DERECHA-->
         <div class="col-3">
-            <p>aca va otra cosa</p>
+            <!-- RECOLECTADO  -->
             <p>Recolectado: {{institution.collected | currency}}</p>
+            <!--ELEMENTO SUMAR Y RESTAR-->
+            <div class="d-flex">
+                <span class="mr-2">Cantidad:</span>
+                <button class="btn btn-sm btn-info buttonLeft" (click)="downQuantity(institution)">-</button>
+                <input 
+                    type="text" 
+                    [(ngModel)]="institution.quantity"
+                    (keyup)="onChangeQuantity($event, institution)"
+                >
+                <button class="btn btn-sm btn-info buttonRight" (click)="upQuantity(institution)">+</button>
+            </div>
         </div>
     </div>
 </div>
