@@ -9,6 +9,7 @@ import { AportarExploreComponent } from './aportar-explore/aportar-explore.compo
 import { AportarHomeComponent } from './aportar-home/aportar-home.component';
 import { AportarContactComponent } from './aportar-contact/aportar-contact.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
+import { TruckComponent } from './truck/truck.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InputIntegerComponent } from './input-integer/input-integer.component';
     AportarExploreComponent,
     AportarHomeComponent,
     AportarContactComponent,
-    InputIntegerComponent
+    InputIntegerComponent,
+    TruckComponent
   ],
   imports: [
     BrowserModule,

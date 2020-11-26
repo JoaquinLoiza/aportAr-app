@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SolidarityTruckService } from '../solidarity-truck.service';
 import { Institution } from './institution';
 
 @Component({
@@ -31,12 +32,13 @@ export class InstitutionListComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private truck: SolidarityTruckService) { }
 
   ngOnInit(): void {
   }
 
   addToTruck(institution: Institution): void {
-    
+    this.truck.addToTruck(institution);
+    institution.quantity = 0;
   }
 }
