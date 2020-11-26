@@ -35,19 +35,8 @@ export class InstitutionListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  upQuantity(institution: Institution): void{
-    institution.quantity++;
-  }
 
-  downQuantity(institution: Institution): void{
-    if(institution.quantity>0)
-    institution.quantity--;
-  }
-
-  onChangeQuantity(event, institution: Institution): void {
-    if ( !(event.target.value >= 0) || event.keyCode == 190 || event.keyCode == 32 || event.target.value == "") {
-      institution.quantity = 1;
-    }
+  addToTruck(institution: Institution): void {
+    
   }
 }

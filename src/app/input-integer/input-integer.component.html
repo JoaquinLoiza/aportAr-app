@@ -1,0 +1,9 @@
+<div class="d-flex">
+    <button class="btn btn-sm btn-info buttonLeft" (click)="downQuantity()">-</button>
+    <input 
+        type="text" 
+        [(ngModel)]="quantity"
+        (keyup)="onChangeQuantity($event)"
+    >
+    <button class="btn btn-sm btn-info buttonRight" (click)="upQuantity()">+</button>
+</div>

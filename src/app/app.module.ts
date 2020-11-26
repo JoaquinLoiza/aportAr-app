@@ -8,6 +8,7 @@ import { InstitutionListComponent } from './institution-list/institution-list.co
 import { AportarExploreComponent } from './aportar-explore/aportar-explore.component';
 import { AportarHomeComponent } from './aportar-home/aportar-home.component';
 import { AportarContactComponent } from './aportar-contact/aportar-contact.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AportarContactComponent } from './aportar-contact/aportar-contact.compo
     InstitutionListComponent,
     AportarExploreComponent,
     AportarHomeComponent,
-    AportarContactComponent
+    AportarContactComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,
