@@ -21,23 +21,18 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Inicio</a>
+          <a class="nav-link" [routerLink]="['/']">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Explorar</a>
+          <a class="nav-link" [routerLink]="['/explore']">Explorar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" [routerLink]="['/contact']">Contacto</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-9 bg-danger">
-      <app-institution-list></app-institution-list>
-    </div>
-    <div class="col-3 bg-info">Camion Solidario</div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
