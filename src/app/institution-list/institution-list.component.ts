@@ -38,7 +38,9 @@ export class InstitutionListComponent implements OnInit {
   }
 
   addToTruck(institution: Institution): void {
-    this.truck.addToTruck(institution);
-    institution.quantity = 0;
+    if(institution.quantity){
+      this.truck.addToTruck(institution);
+      institution.quantity = 0;
+    }
   }
 }

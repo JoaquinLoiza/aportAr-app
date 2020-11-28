@@ -31,7 +31,7 @@ export class InputIntegerComponent implements OnInit {
   }
 
   onChangeQuantity(event): void {
-    if ( !(event.target.value >= 0) || event.keyCode == 190 || event.keyCode == 32 || event.target.value == "") {
+    if ( !(event.target.value >= 0) || event.keyCode == 190 || event.keyCode == 32) {
       this.quantity = 1;
       this.quantityChange.emit(this.quantity);
     }else

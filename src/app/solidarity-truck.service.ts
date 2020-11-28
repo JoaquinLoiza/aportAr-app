@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Institution } from './institution-list/institution';
 
 @Injectable({
@@ -6,16 +7,19 @@ import { Institution } from './institution-list/institution';
 })
 export class SolidarityTruckService {
 
-  truckBox: Institution[] = [];
+  private _truckBox: Institution[] = [];
+
+  truckBox: BehaviorSubject<Institution[]> = new BehaviorSubject([]);
 
   constructor() { }
 
   addToTruck(institution: Institution): void {
-    let item: Institution = this.truckBox.find((v1) => v1.name == institution.name);
+    let item: Institution = this._truckBox.find((v1) => v1.name == institution.name);
     if (!item) {
-      this.truckBox.push({...institution});
+      this._truckBox.push({...institution});
     } else {
       item.quantity += institution.quantity;
-    } 
+    }
+    this.truckBox.next(this._truckBox); 
   }
 }

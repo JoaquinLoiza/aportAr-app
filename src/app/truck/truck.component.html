@@ -1,1 +1,5 @@
-<p>truck works!</p>
+<ul>
+    <li *ngFor="let i of truckBox$ | async">
+        {{i.name}}: {{i.quantity}}
+    </li>
+</ul>

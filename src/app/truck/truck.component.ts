@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Institution } from '../institution-list/institution';
 import { SolidarityTruckService } from '../solidarity-truck.service';
 
 @Component({
@@ -8,7 +10,11 @@ import { SolidarityTruckService } from '../solidarity-truck.service';
 })
 export class TruckComponent implements OnInit {
 
-  constructor(private truck: SolidarityTruckService) { }
+  truckBox$: Observable<Institution[]>;
+
+  constructor(private truck: SolidarityTruckService) {
+    this.truckBox$ = truck.truckBox.asObservable();
+  }
 
   ngOnInit(): void {
   }

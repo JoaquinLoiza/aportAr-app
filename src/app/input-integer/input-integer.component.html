@@ -1,7 +1,7 @@
 <div class="d-flex">
     <button class="btn btn-sm btn-info buttonLeft" (click)="downQuantity()">-</button>
     <input 
-        type="text" 
+        type="number" 
         [(ngModel)]="quantity"
         (keyup)="onChangeQuantity($event)"
     >
