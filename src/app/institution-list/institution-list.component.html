@@ -1,7 +1,7 @@
 <div class="container-fluid" *ngFor='let institution of institutions'>
-    <div class="row border border-dark rounded mt-2 d-flex justify-content-between">
+    <div class="row mt-4 d-flex justify-content-between">
         <!--CONTENEDOR IZQUIERDA-->
-        <div class="col-9">
+        <div class="col-9 pl-0 mr-2 contLeft">
             <div>
                 <img src="{{institution.image}}" alt="{{institution.name}}">
             </div>
@@ -12,17 +12,10 @@
             <div>
                 <p>{{institution.presentation}}</p>   
             </div>
-            <div>
-                <p>{{institution.description}}</p>
-                <ul class="nav" >
-                    <li class="nav-item" *ngFor='let link of institution.links'>
-                        <a class="nav-link active" href="https://{{link}}" target="_blank">{{link}}</a>
-                    </li>
-                </ul>
-            </div>
+            <app-dropdown-item [message]="institution.description" [links]="institution.links"></app-dropdown-item>
         </div>
         <!--CONTENEDOR DERECHA-->
-        <div class="col-3">
+        <div class="col-3 contRight">
             <!-- RECOLECTADO  -->
                                                                        <!--SI ES UNA INSTITUCION NUEVA DEBERIA MOSTRAR UN CARTELITO-->
             <p>Recolectado: {{institution.collected | currency}}</p>

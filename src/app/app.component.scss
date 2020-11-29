@@ -1,3 +1,24 @@
+nav ul li a{
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+    color: #4a4a4a;
+}
+
+nav ul li a:hover{
+    color: #eb9e32;
+    font-size: 1.3rem;
+    font-weight:bold;
+    background-color: #4a4a4a15;
+    border-radius: 84px 84px 84px 84px;
+    -moz-border-radius: 84px 84px 84px 84px;
+    -webkit-border-radius: 84px 84px 84px 84px;
+    border: 0px none #000000;
+}
+
+#navbarResponsive {
+    text-align: center;
+}
+
 .logo {
-    width: 50%;
+    width: 60%;
 }
