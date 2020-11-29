@@ -10,6 +10,7 @@ import { AportarHomeComponent } from './aportar-home/aportar-home.component';
 import { AportarContactComponent } from './aportar-contact/aportar-contact.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 import { TruckComponent } from './truck/truck.component';
+import { DropdownItemComponent } from './dropdown-item/dropdown-item.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TruckComponent } from './truck/truck.component';
     AportarHomeComponent,
     AportarContactComponent,
     InputIntegerComponent,
-    TruckComponent
+    TruckComponent,
+    DropdownItemComponent
   ],
   imports: [
     BrowserModule,
