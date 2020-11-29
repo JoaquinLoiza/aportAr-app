@@ -11,7 +11,7 @@ export class InstitutionListComponent implements OnInit {
 
   institutions: Institution[] = [ 
     {
-      image: 'https://lh3.googleusercontent.com/proxy/EhDv5vltbAE0dg-9bHcQRZyjGcfjp_IKZ7i7GylRiEHj5xxgt-cHevRH49xcWfnBVXZqxU00cnis2l893axzXsMkEkLjdf7T3ckPWz0C3HTx0OGCBXZ0xotW7RpTjGx_a8X_vHUsXcMrpTA',
+      image: 'https://i.ibb.co/qmbVw8L/comedor.jpg',
       name: 'La casa azul',
       location: 'Rauch BsAs Argentina',
       presentation: 'Comedor comunitario para niños/as, centro de recreacion y apoyo escolar',
@@ -21,7 +21,7 @@ export class InstitutionListComponent implements OnInit {
       quantity: 0,
     },
     {
-      image: 'https://lh3.googleusercontent.com/proxy/EhDv5vltbAE0dg-9bHcQRZyjGcfjp_IKZ7i7GylRiEHj5xxgt-cHevRH49xcWfnBVXZqxU00cnis2l893axzXsMkEkLjdf7T3ckPWz0C3HTx0OGCBXZ0xotW7RpTjGx_a8X_vHUsXcMrpTA',
+      image: 'https://i.ibb.co/qmbVw8L/comedor.jpg',
       name: 'Sonrisas felices',
       location: 'Tandil BsAs Argentina',
       presentation: 'Comedor comunitario para niños/as',
