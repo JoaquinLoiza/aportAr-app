@@ -15,11 +15,14 @@ export class SolidarityTruckService {
 
   addToTruck(institution: Institution): void {
     let item: Institution = this._truckBox.find((v1) => v1.name == institution.name);
+    let quantity = Math.ceil(institution.quantity);
+
     if (!item) {
+      institution.quantity = quantity;
       this._truckBox.push({...institution});
     } else {
-      item.quantity += institution.quantity;
+      item.quantity += quantity;
     }
-    this.truckBox.next(this._truckBox); 
+    this.truckBox.next(this._truckBox);
   }
 }
