@@ -1,4 +1,21 @@
-.contLeft, .contRight{
+.cont {
     background-color: #ffffff;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.089);
+    box-shadow: 7px 8px 11px 0px rgba(50, 50, 50, 0.48);
+    font-size: 15px;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+}
+
+.nameInst {
+    font-size: 1.5rem;
+}
+
+.bag {
+    font-size: 1.6rem;
+}
+
+.contImg {
+    border-radius: 14px 14px 0 0;
+    height: 13rem;
 }

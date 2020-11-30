@@ -1,5 +1,4 @@
-
-input {
+.inputInteger {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     appearance: textfield;
@@ -15,10 +14,14 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-input:focus { 
+.inputInteger:focus { 
     outline: 0;
     border-color: #171b1f;
     box-shadow: 0 0 10px #171b1f;
+}
+
+.inputInteger[type="number"] {
+    background-color : #fdecc8; 
 }
 
 button:focus { 

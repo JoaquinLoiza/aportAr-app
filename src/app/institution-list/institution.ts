@@ -7,4 +7,5 @@ export interface Institution {
     description: string;
     links: Array<string>;
     quantity: number;
+    price: number;
 }

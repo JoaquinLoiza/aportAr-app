@@ -1,12 +1,10 @@
 <button class="btn btn-sm btn-outline-dark mb-2" (click)="toggleInfo()">{{btnMessage}}</button>
 <div *ngIf="toggle">
     <p>{{message}}</p>
-    <ul class="nav">
-        <li class="nav-item">
-            <span class="nav-link">Links:</span>
-        </li>
-        <li class="nav-item" *ngFor='let link of links'>
-            <a class="nav-link" href="https://{{link}}" target="_blank">{{link}}</a>
+    <span>Links:</span>
+    <ul>
+        <li *ngFor='let link of links'>
+            <a href="https://{{link}}" target="_blank">{{link}}</a>
         </li>
     </ul>
 </div>
