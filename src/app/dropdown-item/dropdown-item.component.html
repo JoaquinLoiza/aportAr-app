@@ -1,8 +1,8 @@
 <button class="btn btn-sm btn-outline-dark mb-2" (click)="toggleInfo()">{{btnMessage}}</button>
-<div *ngIf="toggle">
+<div *ngIf="toggle" class="pb-1">
     <p>{{message}}</p>
     <span>Links:</span>
-    <ul>
+    <ul class="pl-0">
         <li *ngFor='let link of links'>
             <a href="https://{{link}}" target="_blank">{{link}}</a>
         </li>

@@ -11,9 +11,11 @@ import { SolidarityTruckService } from '../solidarity-truck.service';
 export class TruckComponent implements OnInit {
 
   truckBox$: Observable<Institution[]>;
+  totalPrice$: Observable<number>;
 
   constructor(private truck: SolidarityTruckService) {
     this.truckBox$ = truck.truckBox.asObservable();
+    this.totalPrice$ = truck.total.asObservable();
   }
 
   ngOnInit(): void {

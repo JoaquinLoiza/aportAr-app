@@ -8,9 +8,11 @@ import { Institution } from './institution-list/institution';
 export class SolidarityTruckService {
 
   private _truckBox: Institution[] = [];
+  private _total: number = 0;
 
   truckBox: BehaviorSubject<Institution[]> = new BehaviorSubject([]);
-
+  total: BehaviorSubject<number> = new BehaviorSubject(this._total);
+  
   constructor() { }
 
   addToTruck(institution: Institution): void {
@@ -23,6 +25,16 @@ export class SolidarityTruckService {
     } else {
       item.quantity += quantity;
     }
+    this._total = this.totalPrice();
+    this.total.next(this._total);
     this.truckBox.next(this._truckBox);
+  }
+
+  totalPrice(): number {
+    let total: number = 0;
+    this._truckBox.forEach(element => {
+      total += (element.price * element.quantity);
+    });
+    return total;
   }
 }

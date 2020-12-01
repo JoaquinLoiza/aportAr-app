@@ -1,9 +1,24 @@
-<div class="container cont pb-3">
-    <h2 class="d-flex justify-content-center pt-3">Camión solidario <i class="fas fa-truck pl-2 text-danger"></i></h2>
-    <ul>
-        <li *ngFor="let i of truckBox$ | async">
-            {{i.name}}: {{i.quantity}}
-        </li>
-    </ul>
+<div class="container d-flex flex-column justify-content-between cont pb-3">
+    <div>
+        <h2 class="d-flex justify-content-center pt-3">Camión solidario <i class="fas fa-truck pl-2 text-danger"></i></h2>
+        <table class="table table-sm table-hover">
+            <thead class="tHead">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of truckBox$ | async">
+                    <td>{{i.name}}</td>
+                    <td>{{i.quantity}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template [ngIf]="totalPrice$ | async">
+        <div class="d-flex justify-content-center border-top border-danger">
+            <span class="text-danger pt-2">Total: ARS ${{totalPrice$ | async}}</span>
+        </div>
+    </ng-template>
 </div>
-
