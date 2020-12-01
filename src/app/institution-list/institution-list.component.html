@@ -1,7 +1,7 @@
 <div class="container-fluid mt-4" *ngFor='let institution of institutions'>
     <div class="row d-flex justify-content-between">
         <!--CONTENEDOR IZQUIERDA-->
-        <div class="col-7">
+        <div class="col-md-12 col-lg-7 pb-4">
             <div class="cont">
                 <div class="contImg" style="background-image: url({{institution.image}});"></div>
                 <div class="pl-4 pr-4 pt-2">
@@ -22,9 +22,9 @@
             </div>
         </div>
         <!--CONTENEDOR DERECHA-->
-        <div class="col-5">
+        <div class="col-md-12 col-lg-5">
             <div class="cont pt-4 pr-4 pl-4 pb-4">
-                <h5>¡Ayudame con un bolsón!</h5>
+                <h3>¡Ayudame con un bolsón!</h3>
                 <div class="d-flex align-items-center mt-3">
                     <span><i class="fas fa-shopping-bag bag mr-3 text-danger"></i> X</span>
                     <app-input-integer 
@@ -33,9 +33,8 @@
                     </app-input-integer>
                 </div>
                 <div class="pt-3">
-                    <button class="btn btn-sm btn-block btn-danger" (click)="addToTruck(institution)">Agregar al camión (
-                        <span>ARS ${{institution.price * institution.quantity}} )</span>
-                    </button>
+                    <span>ARS ${{institution.price * institution.quantity}}</span>
+                    <button class="btn btn-sm btn-block btn-danger" (click)="addToTruck(institution)">Agregar al camión</button>
                 </div>
             </div>
         </div>
